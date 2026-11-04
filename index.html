@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sonia</title>
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
   <header class="titlebar">
@@ -12,107 +15,239 @@
   </header>
 
   <main class="grid">
-    <button class="tile" data-target="panel-1">Art</button>
-    <button class="tile" data-target="panel-2">Game Development</button>
-    <button class="tile" data-target="panel-3">Research</button>
-    <button class="tile" data-target="panel-4">Summer Programs</button>
-    <button class="tile" data-target="panel-5">Space</button>
-    <button class="tile" data-target="panel-6">Computational Minecraft</button>
+    <button class="tile" data-target="panel-1"><span class="tile-num">01</span><span class="tile-label">Art</span></button>
+    <button class="tile" data-target="panel-2"><span class="tile-num">02</span><span class="tile-label">Game Development</span></button>
+    <button class="tile" data-target="panel-3"><span class="tile-num">03</span><span class="tile-label">Research</span></button>
+    <button class="tile" data-target="panel-4"><span class="tile-num">04</span><span class="tile-label">Summer Programs</span></button>
+    <button class="tile" data-target="panel-5"><span class="tile-num">05</span><span class="tile-label">Space</span></button>
+    <button class="tile" data-target="panel-6"><span class="tile-num">06</span><span class="tile-label">Computational Minecraft</span></button>
   </main>
 
   <div class="overlay" id="overlay">
-    <section class="panel" id="panel-1">
-      <button class="close" aria-label="Close">&times;</button>
-      <div class="panel-body">
+
+    <section class="panel" id="panel-1" role="dialog" aria-label="Art">
+      <header class="panel-head">
         <h2>Art</h2>
-        <p>I make things in a few different media: charcoal on paper, 3D scenes in Blender, and LEGO designs in BrickLink Studio. The background of this page is one of my charcoal drawings, a view through a car window toward a car hauler and an overpass. Another charcoal piece was selected for publication in the Celebrating Art anthology.</p>
+        <button class="close" aria-label="Close">&times;</button>
+      </header>
+      <div class="panel-body">
 
-        <h3>Blender</h3>
-        <p>I picked up Blender to make assets for my Roblox games and never really stopped. First up is a stack of pastel glazed donuts, lit like a kitchen counter in the afternoon.</p>
-        <figure>
-          <img src="images/donuts.png" alt="Stack of pastel glazed donuts with sprinkles on a plate, rendered in Blender">
-          <figcaption>Pastel donuts, rendered in Blender.</figcaption>
-        </figure>
+        <article class="row">
+          <div class="text">
+            <span class="eyebrow">Charcoal</span>
+            <h3>Through the car window</h3>
+            <p>I make things in a few different media: charcoal on paper, 3D scenes in Blender, and LEGO designs in BrickLink Studio.</p>
+            <p>The background of this page is one of my charcoal drawings, a view through a car window toward a car hauler and an overpass. Another charcoal piece was selected for publication in the Celebrating Art anthology.</p>
+          </div>
+          <div class="media">
+            <figure class="portrait">
+              <img src="background.jpg" alt="Charcoal drawing of a car hauler and an overpass seen through a car window" loading="lazy" decoding="async">
+              <figcaption>Charcoal on paper. Also the background of this page.</figcaption>
+            </figure>
+          </div>
+        </article>
 
-        <h3>LEGO</h3>
-        <p>I design LEGO models digitally in BrickLink Studio 2.0, and for some of them I carry the model into Blender to render and animate it.</p>
+        <article class="row">
+          <div class="text">
+            <span class="eyebrow">Blender</span>
+            <h3>Pastel donuts</h3>
+            <p>I picked up Blender to make assets for my Roblox games and never really stopped. First up is a stack of pastel glazed donuts, lit like a kitchen counter in the afternoon.</p>
+          </div>
+          <div class="media">
+            <figure>
+              <img src="images/donuts.png" alt="Stack of pastel glazed donuts with sprinkles on a plate, rendered in Blender" loading="lazy" decoding="async">
+              <figcaption>Pastel donuts, rendered in Blender.</figcaption>
+            </figure>
+          </div>
+        </article>
 
-        <h4>Record player</h4>
-        <p>A hinged, portable record player with a case, turntable, and tonearm. I built it in Studio, where the connectivity check reports 0 detached sections and the hinges are linked so the lid actually opens and closes. I then exported it into Blender, split it into separate objects (needle, record, top, case), textured it, and keyframed a 400-frame animation at 1920 × 1080 and 24 fps.</p>
-        <figure>
-          <img src="images/record-player-studio.png" alt="Record player model in BrickLink Studio with connectivity and hinge views">
-          <figcaption>The model in BrickLink Studio 2.0.</figcaption>
-        </figure>
-        <div class="gallery">
-          <figure>
-            <img src="images/record-player-closed.png" alt="Closed record player case leaning in a sunlit corner">
-            <figcaption>The case, closed.</figcaption>
-          </figure>
-          <figure>
-            <img src="images/record-player-open.png" alt="Open record player with turntable and tonearm">
-            <figcaption>The case, open.</figcaption>
-          </figure>
-          <figure class="span">
-            <img src="images/record-player-knobs.png" alt="Close-up of record player knobs and tonearm">
-            <figcaption>Knobs and tonearm up close.</figcaption>
-          </figure>
-        </div>
+        <article class="row">
+          <div class="text">
+            <span class="eyebrow">LEGO</span>
+            <h3>Record player</h3>
+            <p>I design LEGO models digitally in BrickLink Studio 2.0, and for some of them I carry the model into Blender to render and animate it.</p>
+            <p>This one is a hinged, portable record player with a case, turntable, and tonearm. I built it in Studio, where the connectivity check reports 0 detached sections and the hinges are linked so the lid actually opens and closes. I then exported it into Blender, split it into separate objects (needle, record, top, case), textured it, and keyframed a 400-frame animation at 1920 × 1080 and 24 fps.</p>
+          </div>
+          <div class="media">
+            <figure>
+              <img src="images/record-player-studio.png" alt="Record player model in BrickLink Studio with connectivity and hinge views" loading="lazy" decoding="async">
+              <figcaption>The model in BrickLink Studio 2.0.</figcaption>
+            </figure>
+            <div class="gallery">
+              <figure>
+                <img src="images/record-player-closed.png" alt="Closed record player case leaning in a sunlit corner" loading="lazy" decoding="async">
+                <figcaption>The case, closed.</figcaption>
+              </figure>
+              <figure>
+                <img src="images/record-player-open.png" alt="Open record player with turntable and tonearm" loading="lazy" decoding="async">
+                <figcaption>The case, open.</figcaption>
+              </figure>
+              <figure class="span">
+                <img src="images/record-player-knobs.png" alt="Close-up of record player knobs and tonearm" loading="lazy" decoding="async">
+                <figcaption>Knobs and tonearm up close.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
 
-        <h4>Galaxy Air Hockey</h4>
-        <p>A LEGO air hockey table with galaxy-themed side panels, rink markings across the playing surface, and red strikers.</p>
-        <figure>
-          <img src="images/air-hockey.png" alt="LEGO air hockey table with galaxy side panels">
-          <figcaption>Galaxy Air Hockey, in BrickLink Studio.</figcaption>
-        </figure>
+        <article class="row">
+          <div class="text">
+            <span class="eyebrow">LEGO</span>
+            <h3>Galaxy Air Hockey</h3>
+            <p>A LEGO air hockey table with galaxy-themed side panels, rink markings across the playing surface, and red strikers.</p>
+          </div>
+          <div class="media">
+            <figure>
+              <img src="images/air-hockey.png" alt="LEGO air hockey table with galaxy side panels" loading="lazy" decoding="async">
+              <figcaption>Galaxy Air Hockey, in BrickLink Studio.</figcaption>
+            </figure>
+          </div>
+        </article>
 
-        <h4>Weight-driven pendulum clock</h4>
-        <p>A pendulum clock built from 421 LEGO parts. The hard part was fitting the gear train, escapement, and winding differential together using only parts that actually exist. The differential lets the weight be rewound by hand while the gear chain keeps the clock running. The pendulum needs a one-second period, which works out to a length of about 24.8 cm. It's still a work in progress, since I haven't sourced the parts for a physical build yet.</p>
-        <figure>
-          <img src="images/lego-clock.png" alt="Three views of a LEGO weight-driven pendulum clock model">
-          <figcaption>Three views of the clock model in Studio.</figcaption>
-        </figure>
+        <article class="row">
+          <div class="text">
+            <span class="eyebrow">LEGO</span>
+            <h3>Weight-driven pendulum clock</h3>
+            <p>A pendulum clock built from 421 LEGO parts. The hard part was fitting the gear train, escapement, and winding differential together using only parts that actually exist. The differential lets the weight be rewound by hand while the gear chain keeps the clock running.</p>
+            <p>The pendulum needs a one-second period, which works out to a length of about 24.8 cm. It's still a work in progress, since I haven't sourced the parts for a physical build yet.</p>
+          </div>
+          <div class="media">
+            <figure>
+              <img src="images/lego-clock.png" alt="Three views of a LEGO weight-driven pendulum clock model" loading="lazy" decoding="async">
+              <figcaption>Three views of the clock model in Studio.</figcaption>
+            </figure>
+          </div>
+        </article>
+
       </div>
     </section>
 
-    <section class="panel" id="panel-2">
-      <button class="close" aria-label="Close">&times;</button>
-      <div class="panel-body">
+    <section class="panel" id="panel-2" role="dialog" aria-label="Game Development">
+      <header class="panel-head">
         <h2>Game Development</h2>
-        <p>Add your info here.</p>
+        <button class="close" aria-label="Close">&times;</button>
+      </header>
+      <div class="panel-body">
+        <p class="placeholder">Add your info here.</p>
       </div>
     </section>
 
-    <section class="panel" id="panel-3">
-      <button class="close" aria-label="Close">&times;</button>
-      <div class="panel-body">
+    <section class="panel" id="panel-3" role="dialog" aria-label="Research">
+      <header class="panel-head">
         <h2>Research</h2>
-        <p>Add your info here.</p>
+        <button class="close" aria-label="Close">&times;</button>
+      </header>
+      <div class="panel-body">
+
+        <article class="row">
+          <div class="text">
+            <span class="eyebrow">Math</span>
+            <h3>Strong resilience of dominating sets</h3>
+            <p class="meta">Pham Discrete Mathematics Research Group, Alabama A&amp;M</p>
+            <p>I cold-emailed a graph theory professor and ended up independently developing proofs and combinatorial formulas for the strong resilience of a fixed dominating set under random edge failures. I implemented the computational methods in Python and co-first-authored a paper introducing the new graph resilience metric and analyzing its properties.</p>
+          </div>
+          <div class="media">
+            <div class="abstract">
+              <span class="label">Abstract</span>
+              <p>Given a simple finite graph <i>G</i> = (<i>V</i>(<i>G</i>), <i>E</i>(<i>G</i>)), a vertex subset <i>D</i> ⊆ <i>V</i>(<i>G</i>) is a dominating set of <i>G</i> if for each <i>v</i> ∈ <i>V</i>(<i>G</i>) − <i>D</i>, there exists a vertex <i>u</i> ∈ <i>N</i>(<i>v</i>) ∩ <i>D</i>. When an edge subset <i>B</i> ⊆ <i>E</i>(<i>G</i>) is deleted, the set <i>D</i> may no longer be a dominating set of the resulting graph <i>G</i> − <i>B</i>; however, there may exist another dominating set of <i>G</i> − <i>B</i> with equal cardinality. In real-world practical settings, such a reconfiguration of vertices may not be feasible. It is therefore of interest to study the properties of a fixed dominating set. We introduce a new parameter, the strong resilience <i>R</i><sub><i>G</i></sub>(<i>D</i>, <i>t</i>) of a fixed dominating set <i>D</i> under the deletion of <i>t</i> edges. We investigate fundamental properties of the strong resilience, methods for its computation, and potential applications.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="text">
+            <span class="eyebrow">Hydropower</span>
+            <h3>Wave energy arrays around a retired platform</h3>
+            <p class="meta">Structural Performance &amp; Fluid-Structure Interaction (SP-I) Lab, University of Houston</p>
+            <p>I mapped the platform's geometry, built buoy and pile meshes, and developed Capytaine boundary-element simulations of eight-buoy arrays. I generated 2,287 structured and Latin hypercube layouts, calculated their q-factors, ran statistical and SHAP analyses, and co-first-authored the paper.</p>
+          </div>
+          <div class="media">
+            <div class="abstract">
+              <span class="label">Abstract</span>
+              <p>The decommissioning of aging Gulf of America oil and gas platforms threatens the ecological and economic benefits they provide, motivating alternative end-of-life pathways such as hosting wave energy converters. This study investigates how arrays of wave energy converters (WECs) interact hydrodynamically when placed around an existing retired platform, namely the South Pass 83 (SP-83A). Eight heaving point absorbers were modeled with the open-source boundary element solver Capytaine under linear potential-flow theory and optimal control, using a monochromatic 6s wave from a 315° heading. Layout quality was measured with the <i>q</i>-factor, i.e., the ratio of array power to that of the same number of isolated devices. We evaluated 1,287 structured zone-based layouts and 1,000 Latin hypercube layouts, each with and without the platform's ten piles. Unstructured layouts performed better: mean <i>q</i> was 0.975 versus 0.869, 40.8% versus 5.3% of layouts exceeded <i>q</i>=1, with the highest <i>q</i> being 1.391 versus 1.110. High-<i>q</i> arrays spread buoys across the wave front and avoided close spacing, with the best layouts keeping devices roughly half a wavelength apart. The piles raised mean <i>q</i> by 0.0150 (structured) and 0.0066 (Latin hypercube), under 2% of the pile-free value, and largely preserved layout rankings (Pearson <i>r</i>=0.973). Individual layouts shifted by up to about ±0.08, but the piles did however reorder similarly ranked layouts. Buoy placement matters more than a platform's presence, which acts as a second-order effect. Results are limited to one sea state and idealized assumptions.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="text">
+            <span class="eyebrow">Computational chemistry</span>
+            <h3>Stability of boron fullerenes</h3>
+            <p class="meta">Caliskan Lab, University of Houston Clear Lake</p>
+            <p>I learned QuantumATK and density functional theory (DFT) to study the ground-state energies and thermodynamic stability of fullerenes, and presented the findings at UHCL's Student Conference for Research and Creative Arts.</p>
+            <p>I'm now investigating geometry-based stability rules for boron fullerenes, analogous to the isolated pentagon rule for carbon.</p>
+          </div>
+          <div class="media">
+            <figure>
+              <img src="images/fullerene-b60-b70.png" alt="B60 and B70 boron cage structures with observed bond length alternation and angle ranges, shown in QuantumATK" loading="lazy" decoding="async">
+              <figcaption>B60 and B70 cages, taken from QuantumATK.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="text">
+            <span class="eyebrow">Neuroscience</span>
+            <h3>Neural connectivity during learning</h3>
+            <p class="meta">Vendrell-Llopis Lab (NVL), University of Alabama at Birmingham</p>
+            <p>I trained XGBoost models and SHAP explainers on sliding-window neural spike data to investigate how neural connectivity changes during learning. I also used PCA to find patterns in neural activity and quantified how neural stimulation hits are distributed.</p>
+          </div>
+          <div class="media">
+            <figure>
+              <img src="images/neuro-pca.png" alt="PCA summary plots of neural data, including distance to the hit centroid around hit onset" loading="lazy" decoding="async">
+              <figcaption>Some PCA plots from neural data.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="text">
+            <span class="eyebrow">Biomechanics</span>
+            <h3>Amputee movement in OpenSim</h3>
+            <p class="meta">Talaty Biomechanics Lab, Penn State Abington</p>
+            <p>I learned inverse kinematics, forward dynamics, and OpenSim simulation, and I'm currently analyzing amputee movement data through inverse kinematics simulations.</p>
+          </div>
+          <div class="media">
+            <figure class="portrait">
+              <img src="images/opensim-skeleton.png" alt="OpenSim musculoskeletal model standing on a checkered floor with marker points and leg muscles" loading="lazy" decoding="async">
+              <figcaption>A model in OpenSim.</figcaption>
+            </figure>
+          </div>
+        </article>
+
       </div>
     </section>
 
-    <section class="panel" id="panel-4">
-      <button class="close" aria-label="Close">&times;</button>
-      <div class="panel-body">
+    <section class="panel" id="panel-4" role="dialog" aria-label="Summer Programs">
+      <header class="panel-head">
         <h2>Summer Programs</h2>
-        <p>Add your info here.</p>
+        <button class="close" aria-label="Close">&times;</button>
+      </header>
+      <div class="panel-body">
+        <p class="placeholder">Add your info here.</p>
       </div>
     </section>
 
-    <section class="panel" id="panel-5">
-      <button class="close" aria-label="Close">&times;</button>
-      <div class="panel-body">
+    <section class="panel" id="panel-5" role="dialog" aria-label="Space">
+      <header class="panel-head">
         <h2>Space</h2>
-        <p>Add your info here.</p>
+        <button class="close" aria-label="Close">&times;</button>
+      </header>
+      <div class="panel-body">
+        <p class="placeholder">Add your info here.</p>
       </div>
     </section>
 
-    <section class="panel" id="panel-6">
-      <button class="close" aria-label="Close">&times;</button>
-      <div class="panel-body">
+    <section class="panel" id="panel-6" role="dialog" aria-label="Computational Minecraft">
+      <header class="panel-head">
         <h2>Computational Minecraft</h2>
-        <p>Add your info here.</p>
+        <button class="close" aria-label="Close">&times;</button>
+      </header>
+      <div class="panel-body">
+        <p class="placeholder">Add your info here.</p>
       </div>
     </section>
+
   </div>
 
   <script src="script.js"></script>
