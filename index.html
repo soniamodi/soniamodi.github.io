@@ -3,53 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sonia Modi</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Sonia</title>
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
   <header class="titlebar">
-    <h1>Sonia Modi</h1>
+    <h1>Sonia</h1>
   </header>
 
   <main class="grid">
-    <button class="tile" data-target="panel-1">About</button>
-    <button class="tile" data-target="panel-2">Research</button>
-    <button class="tile" data-target="panel-3">Projects</button>
-    <button class="tile" data-target="panel-4">Leadership</button>
-    <button class="tile" data-target="panel-5">Making</button>
-    <button class="tile" data-target="panel-6">Contact</button>
+    <button class="tile" data-target="panel-1">Art</button>
+    <button class="tile" data-target="panel-2">Game Development</button>
+    <button class="tile" data-target="panel-3">Research</button>
+    <button class="tile" data-target="panel-4">Summer Programs</button>
+    <button class="tile" data-target="panel-5">Space</button>
+    <button class="tile" data-target="panel-6">Computational Minecraft</button>
   </main>
 
   <div class="overlay" id="overlay">
     <section class="panel" id="panel-1">
       <button class="close" aria-label="Close">&times;</button>
-      <h2>About</h2>
-      <p>Add your info here.</p>
+      <div class="panel-body">
+        <h2>Art</h2>
+        <p>I make things in a few different media: charcoal on paper, 3D scenes in Blender, and LEGO designs in BrickLink Studio. The background of this page is one of my charcoal drawings, a view through a car window toward a car hauler and an overpass. Another charcoal piece was selected for publication in the Celebrating Art anthology.</p>
+
+        <h3>Blender</h3>
+        <p>I picked up Blender to make assets for my Roblox games and never really stopped. First up is a stack of pastel glazed donuts, lit like a kitchen counter in the afternoon.</p>
+        <figure>
+          <img src="images/donuts.png" alt="Stack of pastel glazed donuts with sprinkles on a plate, rendered in Blender">
+          <figcaption>Pastel donuts, rendered in Blender.</figcaption>
+        </figure>
+
+        <h3>LEGO</h3>
+        <p>I design LEGO models digitally in BrickLink Studio 2.0, and for some of them I carry the model into Blender to render and animate it.</p>
+
+        <h4>Record player</h4>
+        <p>A hinged, portable record player with a case, turntable, and tonearm. I built it in Studio, where the connectivity check reports 0 detached sections and the hinges are linked so the lid actually opens and closes. I then exported it into Blender, split it into separate objects (needle, record, top, case), textured it, and keyframed a 400-frame animation at 1920 × 1080 and 24 fps.</p>
+        <figure>
+          <img src="images/record-player-studio.png" alt="Record player model in BrickLink Studio with connectivity and hinge views">
+          <figcaption>The model in BrickLink Studio 2.0.</figcaption>
+        </figure>
+        <div class="gallery">
+          <figure>
+            <img src="images/record-player-closed.png" alt="Closed record player case leaning in a sunlit corner">
+            <figcaption>The case, closed.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/record-player-open.png" alt="Open record player with turntable and tonearm">
+            <figcaption>The case, open.</figcaption>
+          </figure>
+          <figure class="span">
+            <img src="images/record-player-knobs.png" alt="Close-up of record player knobs and tonearm">
+            <figcaption>Knobs and tonearm up close.</figcaption>
+          </figure>
+        </div>
+
+        <h4>Galaxy Air Hockey</h4>
+        <p>A LEGO air hockey table with galaxy-themed side panels, rink markings across the playing surface, and red strikers.</p>
+        <figure>
+          <img src="images/air-hockey.png" alt="LEGO air hockey table with galaxy side panels">
+          <figcaption>Galaxy Air Hockey, in BrickLink Studio.</figcaption>
+        </figure>
+
+        <h4>Weight-driven pendulum clock</h4>
+        <p>A pendulum clock built from 421 LEGO parts. The hard part was fitting the gear train, escapement, and winding differential together using only parts that actually exist. The differential lets the weight be rewound by hand while the gear chain keeps the clock running. The pendulum needs a one-second period, which works out to a length of about 24.8 cm. It's still a work in progress, since I haven't sourced the parts for a physical build yet.</p>
+        <figure>
+          <img src="images/lego-clock.png" alt="Three views of a LEGO weight-driven pendulum clock model">
+          <figcaption>Three views of the clock model in Studio.</figcaption>
+        </figure>
+      </div>
     </section>
+
     <section class="panel" id="panel-2">
       <button class="close" aria-label="Close">&times;</button>
-      <h2>Research</h2>
-      <p>Add your info here.</p>
+      <div class="panel-body">
+        <h2>Game Development</h2>
+        <p>Add your info here.</p>
+      </div>
     </section>
+
     <section class="panel" id="panel-3">
       <button class="close" aria-label="Close">&times;</button>
-      <h2>Projects</h2>
-      <p>Add your info here.</p>
+      <div class="panel-body">
+        <h2>Research</h2>
+        <p>Add your info here.</p>
+      </div>
     </section>
+
     <section class="panel" id="panel-4">
       <button class="close" aria-label="Close">&times;</button>
-      <h2>Leadership</h2>
-      <p>Add your info here.</p>
+      <div class="panel-body">
+        <h2>Summer Programs</h2>
+        <p>Add your info here.</p>
+      </div>
     </section>
+
     <section class="panel" id="panel-5">
       <button class="close" aria-label="Close">&times;</button>
-      <h2>Making</h2>
-      <p>Add your info here.</p>
+      <div class="panel-body">
+        <h2>Space</h2>
+        <p>Add your info here.</p>
+      </div>
     </section>
+
     <section class="panel" id="panel-6">
       <button class="close" aria-label="Close">&times;</button>
-      <h2>Contact</h2>
-      <p>Add your info here.</p>
+      <div class="panel-body">
+        <h2>Computational Minecraft</h2>
+        <p>Add your info here.</p>
+      </div>
     </section>
   </div>
 
