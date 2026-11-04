@@ -1,0 +1,129 @@
+:root {
+  --offwhite: #faf6f0;
+  --pink: #e8a8b8;
+  --pink-dark: #dc93a6;
+  --brown: #6b4a3a;
+  --brown-light: #8a6553;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--offwhite);
+  color: var(--brown);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.titlebar {
+  background: var(--brown);
+  color: var(--offwhite);
+  padding: 1.25rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.titlebar h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 960px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.tile {
+  aspect-ratio: 1;
+  background: var(--pink);
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.tile:hover {
+  background: var(--pink-dark);
+  transform: translateY(-4px) rotateY(12deg);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(107, 74, 58, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1400px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 20;
+}
+
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.panel {
+  position: absolute;
+  width: min(90vw, 640px);
+  max-height: 85vh;
+  overflow-y: auto;
+  background: var(--offwhite);
+  border: 3px solid var(--pink);
+  border-radius: 20px;
+  padding: 2.5rem;
+  transform: rotateY(90deg) scale(0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.5s ease, opacity 0.4s ease, visibility 0.5s ease;
+}
+
+.panel.open {
+  transform: rotateY(0) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.panel h2 {
+  color: var(--brown);
+  margin-bottom: 1rem;
+}
+
+.panel p {
+  line-height: 1.6;
+  color: var(--brown-light);
+}
+
+.close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--pink-dark);
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
