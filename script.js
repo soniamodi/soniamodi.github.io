@@ -10,6 +10,7 @@ function openPanel(id) {
 
 function closeAll() {
   panels.forEach(p => p.classList.remove('open'));
+  document.querySelectorAll('video').forEach(v => v.pause());
   overlay.classList.remove('open');
 }
 
