@@ -43,9 +43,9 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.75rem;
-  max-width: 780px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1040px;
   margin: 3.5rem auto;
   padding: 0 1.5rem;
 }
@@ -156,7 +156,13 @@ body {
   z-index: 1;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
   .grid {
     grid-template-columns: 1fr;
   }
