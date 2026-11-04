@@ -17,7 +17,7 @@
 
 body {
   background-color: var(--offwhite);
-  background-image: linear-gradient(rgba(251, 247, 241, 0.5), rgba(251, 247, 241, 0.5)), url("background.jpg");
+  background-image: url("background.jpg");
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
