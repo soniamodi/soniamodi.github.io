@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
   <header class="titlebar">
@@ -326,7 +326,66 @@
         <button class="close" aria-label="Close">&times;</button>
       </header>
       <div class="panel-body">
-        <p class="placeholder">Add your info here.</p>
+
+        <article class="row">
+          <div class="text">
+            <span class="eyebrow">Drones</span>
+            <h3>MIT Beaver Works Summer Institute</h3>
+            <p class="meta">UAV Course, July 2 to August 3, 2025</p>
+            <p>A four-week UAV course at MIT's Beaver Works Summer Institute, centered on autonomous drone racing. The goal was to write software that lets a quadrotor fly an obstacle course on its own, using onboard sensing, computer vision, and control, and then to compete against other teams on the course we set up.</p>
+            <p>BWSI is also where I met other students as driven as I was, which pushed me to found the Dulles Aerospace Club. There I fundraised for our own drone, taught other students how to build it, and built it with them. It can do flips in different directions.</p>
+          </div>
+          <div class="media">
+            <figure>
+              <video controls muted playsinline preload="metadata">
+                <source src="images/flight.mp4" type="video/mp4">
+              </video>
+              <figcaption>A test flight.</figcaption>
+            </figure>
+            <div class="gallery">
+              <figure>
+                <img src="images/raspberry-pi.png" alt="Raspberry Pi used on the drone" loading="lazy" decoding="async">
+                <figcaption>The Raspberry Pi.</figcaption>
+              </figure>
+              <figure>
+                <img src="images/drone-course.png" alt="Drone on the flight course setup" loading="lazy" decoding="async">
+                <figcaption>The drone on the course.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="text">
+            <span class="eyebrow">Astrophysics</span>
+            <h3>Summer Science Program</h3>
+            <p class="meta">Astrophysics at Colby College, June 22 to July 24, 2026</p>
+            <p>A five-week, college-level research program where my team did every step of asteroid orbit determination ourselves: pointing the telescope, taking images of the near-Earth asteroid 1943 Anteros, converting those images into positions on the sky, and writing the code that turns those positions into an orbit.</p>
+            <p>We used the Method of Gauss to calculate the asteroid's six orbital elements, then ran 100,000 Monte Carlo samples to put uncertainties on them. Most of the uncertainty traces back to the astrometry step, since the telescope's resolution limits how precisely we can measure position. With the orbit in hand, we could generate an ephemeris to guide future observations of the asteroid, and our observations were submitted to the Minor Planet Center.</p>
+            <p>The program doesn't allow the full write-up to be shared, so this is just an overview. We also took a color image of Stephens Quintet.</p>
+          </div>
+          <div class="media">
+            <figure>
+              <img src="images/stephens-quintet.jpg" alt="Color image of Stephens Quintet taken during the program" loading="lazy" decoding="async">
+              <figcaption>Stephens Quintet.</figcaption>
+            </figure>
+            <figure class="portrait">
+              <img src="images/anteros-orbit.png" alt="Three views of the orbit of asteroid 1943 Anteros compared with Earth's orbit" loading="lazy" decoding="async">
+              <figcaption>The orbit of 1943 Anteros (red) against Earth's (teal), from the side, at 45 degrees, and from above.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="text">
+            <span class="eyebrow">Space biology</span>
+            <h3>NASA GeneLab for High School</h3>
+            <p class="meta">Summer 2025</p>
+            <p>A twelve-week, self-paced summer training program run by NASA's Ames Research Center for high school students. It introduces space biology and the bioinformatics methods used to study how spaceflight affects living things.</p>
+            <p>I learned how omics data is analyzed and worked through analyzing a spaceflight dataset from NASA's Open Science Data Repository.</p>
+          </div>
+        </article>
+
       </div>
     </section>
 
