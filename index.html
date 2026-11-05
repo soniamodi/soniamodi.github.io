@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap">
-  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
   <header class="titlebar">
@@ -410,7 +410,7 @@
             <p>An Isolation Forest model flagged the stars that behaved unusually, and I used Lomb-Scargle periodograms and Box Least Squares to study their periodic behavior. After cross-referencing existing catalogs, I found a star that had never been classified: a new Gamma Doradus (GDOR) variable that pulsates with a period of about 0.36 days.</p>
             <p>I submitted it to the AAVSO International Variable Star Index, the submission was approved, and I'm officially credited as its discoverer.</p>
             <p class="links">
-              <a href="https://vsx.aavso.org/index.php?view=detail.top&amp;oid=10875907" target="_blank" rel="noopener noreferrer">View the VSX entry</a>
+              <a href="https://vsx.aavso.org/index.php?view=detail.top&amp;oid=10875907" target="_blank" rel="noopener noreferrer">https://vsx.aavso.org/index.php?view=detail.top&amp;oid=10875907</a>
             </p>
           </div>
           <div class="media">
@@ -457,9 +457,7 @@
             </div>
             <div class="abstract">
               <span class="label">Lesson slides</span>
-              <p class="links">
-                <a href="images/pulsar-physics.pdf" target="_blank" rel="noopener noreferrer">Pulsar physics</a>
-              </p>
+              <button class="pdf-button" type="button" data-pdf="images/pulsar-physics.pdf" data-title="Pulsar physics">Open the pulsar physics slides</button>
             </div>
           </div>
         </article>
@@ -477,6 +475,16 @@
       </div>
     </section>
 
+  </div>
+
+  <div class="viewer" id="viewer" role="dialog" aria-label="PDF viewer">
+    <div class="viewer-box">
+      <header class="panel-head">
+        <h2 id="viewer-title"></h2>
+        <button class="close" aria-label="Close viewer">&times;</button>
+      </header>
+      <iframe id="viewer-frame" title="PDF viewer"></iframe>
+    </div>
   </div>
 
   <script src="script.js"></script>
