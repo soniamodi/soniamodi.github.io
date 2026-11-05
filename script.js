@@ -6,13 +6,26 @@ const viewer = document.getElementById('viewer');
 const viewerFrame = document.getElementById('viewer-frame');
 const viewerTitle = document.getElementById('viewer-title');
 const viewerClose = viewer.querySelector('.close');
+const viewerOpen = document.getElementById('viewer-open');
 
 function openPanel(id) {
   document.getElementById(id).classList.add('open');
   overlay.classList.add('open');
 }
 
+// Phones and tablets can't render a PDF inside an iframe, so open it in a new tab there.
+function canEmbedPdf() {
+  if (navigator.pdfViewerEnabled === false) return false;
+  const touchMac = /Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1;
+  return !(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || touchMac);
+}
+
 function openViewer(src, title) {
+  if (!canEmbedPdf()) {
+    window.open(src, '_blank', 'noopener');
+    return;
+  }
+  viewerOpen.href = src;
   viewerTitle.textContent = title;
   viewerFrame.src = src;
   viewer.classList.add('open');
