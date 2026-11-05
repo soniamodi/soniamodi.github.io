@@ -471,7 +471,58 @@
         <button class="close" aria-label="Close">&times;</button>
       </header>
       <div class="panel-body">
-        <p class="placeholder">Add your info here.</p>
+
+        <article class="row">
+          <div class="text">
+            <span class="eyebrow">Redstone · Work in progress</span>
+            <h3>Minecraft calculator</h3>
+            <p>A calculator built entirely out of redstone. You enter decimal digits on an input panel, it converts them to binary, adds or subtracts, and shows the answer on a lamp display. It's still a work in progress.</p>
+            <p>I built it mostly by following mattbatwings' YouTube tutorials to learn redstone before moving on to my original goal: implementing the CORDIC algorithm.</p>
+          </div>
+          <div class="media">
+            <figure>
+              <img src="images/mc-calculator-overview.png" alt="Overview of the assembled redstone calculator, with the pink adder and subtractor and the teal register" loading="lazy" decoding="async">
+              <figcaption>The assembled calculator. The adder/subtractor (pink) and the register (teal) feed the output display.</figcaption>
+            </figure>
+            <figure>
+              <img src="images/mc-output-display.png" alt="The calculator's lamp output display showing the numbers 7 and 3" loading="lazy" decoding="async">
+              <figcaption>The output display, showing 7 and 3.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="text">
+            <span class="eyebrow">Redstone · Logic</span>
+            <h3>From logic gates to a subtractor</h3>
+            <p>I started with the basic gates: OR, NOT, AND, and XOR. Pairing an XOR and an AND makes a half-adder, and chaining those into full-adders gives a four-bit ripple-carry adder. Its weakness is that every carry has to pass through each stage in turn.</p>
+            <p>The fix is the carry cancel adder, designed by MagicalGentleman, which uses comparators and signal strength to work out all the carries at once, and it stays compact vertically. Subtraction comes from two's complement: invert the second input and set the carry-in, so the same adder does both with a toggle.</p>
+          </div>
+          <div class="media">
+            <figure>
+              <img src="images/mc-logic-gates.png" alt="Redstone OR, NOT, AND, and XOR gates built with lamps and switches" loading="lazy" decoding="async">
+              <figcaption>The basic gates: OR, NOT, AND, and XOR.</figcaption>
+            </figure>
+            <figure class="portrait">
+              <img src="images/mc-cca.png" alt="A tall carry cancel adder built from pink blocks and redstone" loading="lazy" decoding="async">
+              <figcaption>The carry cancel adder.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="text">
+            <span class="eyebrow">Redstone · Algorithm</span>
+            <h3>CORDIC in redstone</h3>
+            <p>Next I recreated the CORDIC algorithm to calculate sine and cosine in Minecraft, using only addition, subtraction, and bit shifts. Unlike the calculator, this one was my own design.</p>
+          </div>
+          <div class="media">
+            <figure>
+              <img src="images/mc-cordic.png" alt="The CORDIC build, a large ring of red blocks with redstone and lamps" loading="lazy" decoding="async">
+              <figcaption>The CORDIC build.</figcaption>
+            </figure>
+          </div>
+        </article>
       </div>
     </section>
 
