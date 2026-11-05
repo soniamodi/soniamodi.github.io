@@ -523,3 +523,15 @@ body {
     transition: none;
   }
 }
+
+.viewer-open {
+  margin: 0 1rem 0 auto;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--rose);
+  white-space: nowrap;
+}
+
+.viewer-open:hover {
+  color: var(--ink);
+}
