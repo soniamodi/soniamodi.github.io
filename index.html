@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap">
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
   <header class="titlebar">
@@ -400,7 +400,71 @@
         <button class="close" aria-label="Close">&times;</button>
       </header>
       <div class="panel-body">
-        <p class="placeholder">Add your info here.</p>
+
+        <article class="row">
+          <div class="text">
+            <span class="eyebrow">Astronomy</span>
+            <h3>Discovering a variable star</h3>
+            <p class="meta">2MASS J14400154+4431272</p>
+            <p>This started as a side project just for fun. I wrote a Python pipeline that pulls Gaia and ZTF survey data, analyzes stellar light curves, and extracts variability features for thousands of stars.</p>
+            <p>An Isolation Forest model flagged the stars that behaved unusually, and I used Lomb-Scargle periodograms and Box Least Squares to study their periodic behavior. After cross-referencing existing catalogs, I found a star that had never been classified: a new Gamma Doradus (GDOR) variable that pulsates with a period of about 0.36 days.</p>
+            <p>I submitted it to the AAVSO International Variable Star Index, the submission was approved, and I'm officially credited as its discoverer.</p>
+            <p class="links">
+              <a href="https://vsx.aavso.org/index.php?view=detail.top&amp;oid=10875907" target="_blank" rel="noopener noreferrer">View the VSX entry</a>
+            </p>
+          </div>
+          <div class="media">
+            <figure>
+              <img src="images/phase-plot.png" alt="Phase plot of the variable star's light curve folded at its period" loading="lazy" decoding="async">
+              <figcaption>The star's light curve folded at its period.</figcaption>
+            </figure>
+            <figure>
+              <img src="images/star.png" alt="Survey image of the star from the 2MASS Interactive Image Service" loading="lazy" decoding="async">
+              <figcaption>The star, from the 2MASS Interactive Image Service.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="text">
+            <span class="eyebrow">Aerospace</span>
+            <h3>Dulles Aerospace Club</h3>
+            <p class="meta">Founder and President</p>
+            <p>I founded the Dulles Aerospace Club and grew it to more than 16 members. I wrote over 60 slides of lessons on ROS and pulsar physics so students could learn real robotics and astrophysics from scratch.</p>
+            <p>For the hardware side, I fundraised for our drone, taught other students how to build it, and built it with them. It can do flips in different directions.</p>
+            <p>On the astronomy side, I organized an asteroid-detection collaboration with schools in Singapore and Vietnam, and connected students with variable-star research and local astronomy clubs.</p>
+          </div>
+          <div class="media">
+            <figure>
+              <video controls muted playsinline preload="metadata">
+                <source src="images/drone-flip.mp4" type="video/mp4">
+              </video>
+              <figcaption>The club drone doing a flip.</figcaption>
+            </figure>
+            <div class="gallery">
+              <figure class="span">
+                <img src="images/drone-pic.jpeg" alt="The club drone" loading="lazy" decoding="async">
+                <figcaption>The drone.</figcaption>
+              </figure>
+              <figure>
+                <img src="images/drone-remote-on.jpeg" alt="The drone remote powered on" loading="lazy" decoding="async">
+                <figcaption>The remote and drone, powered on.</figcaption>
+              </figure>
+              <figure>
+                <img src="images/assembling-remote.jpeg" alt="Assembling the drone remote" loading="lazy" decoding="async">
+                <figcaption>Assembling the remote.</figcaption>
+              </figure>
+            </div>
+            <div class="abstract">
+              <span class="label">Lesson slides</span>
+              <p class="links">
+                <a href="images/pulsar-physics.pdf" target="_blank" rel="noopener noreferrer">Pulsar physics</a><br>
+                <a href="images/ros-python.pdf" target="_blank" rel="noopener noreferrer">ROS and Python</a>
+              </p>
+            </div>
+          </div>
+        </article>
+
       </div>
     </section>
 
