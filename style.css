@@ -381,6 +381,15 @@ body {
   line-height: 1.7;
   color: var(--brown);
 }
+.panel a {
+  color: var(--rose);
+  overflow-wrap: anywhere;
+}
+
+.panel a:hover {
+  color: var(--ink);
+}
+
 .split {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
